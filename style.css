@@ -1,0 +1,42 @@
+.backimg{
+    background-image: url(4.jpg);
+}
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .product{
+    background-color:transparent;
+    width: 280px;
+    height: 490px;
+    position: absolute;
+    bottom:60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.9s;
+    --left:0px;
+    display: flex;
+    }
+
+    .banner .product .soda{
+        background: var(--url) var(--left) 0,
+        url(1.png);
+        background-size: auto 100%;
+        width: 280px;
+        aspect-ratio: 4/7;
+        background-blend-mode: multiply;
+        mask-image: url(1.png);
+        mask-size: auto 100%;
+        transition: 0.9s;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .banner .product:hover{
+        --left:-1000px;
+        transform: translateX(-50%) translateY(-120px);
+    }
