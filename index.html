@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clinic Management System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="backimg">
-    <div class="banner">
-        <div class="product">
-            <div class="soda"
-                style="--url: url(2.jpg)">
-            </div>
-
-            
+  <header>
+    <h1>Clinic Management System</h1>
+  </header>
+  <main>
+    <!-- Login Section -->
+    <section id="login-section">
+      <h2>Login</h2>
+      <div class="login-forms">
+        <!-- Doctor Login -->
+        <div class="login-form" id="doctor-login">
+          <h3>Doctor Login</h3>
+          <form id="doctorLoginForm">
+            <label for="doc-email">Email:</label>
+            <input type="email" id="doc-email" required>
+            <label for="doc-password">Password:</label>
+            <input type="password" id="doc-password" required>
+            <button type="submit">Login</button>
+          </form>
         </div>
-    </div>
-
-    <div class="banner">
-        <div class="product">
-            <div class="soda"
-                style="--url: url(5.png)">
-            </div>
-
-            
+        <!-- Receptionist Login -->
+        <div class="login-form" id="receptionist-login">
+          <h3>Receptionist Login</h3>
+          <form id="receptionistLoginForm">
+            <label for="rec-email">Email:</label>
+            <input type="email" id="rec-email" required>
+            <label for="rec-password">Password:</label>
+            <input type="password" id="rec-password" required>
+            <button type="submit">Login</button>
+          </form>
         </div>
-    </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- Patient Management Section -->
+    <section id="patient-management-section" style="display:none;">
+      <h2>Patient Management</h2>
+      <form id="patientForm">
+        <label for="patient-name">Patient Name:</label>
+        <input type="text" id="patient-name" required>
+        <label for="patient-age">Age:</label>
+        <input type="number" id="patient-age" required>
+        <label for="patient-gender">Gender:</label>
+        <select id="patient-gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <label for="patient-prescription">Prescription:</label>
+        <textarea id="patient-prescription" required></textarea>
+        <button type="submit">Submit Patient Info</button>
+      </form>
+    </section>
+  </main>
+  <!-- Firebase SDK Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
 </body>
 </html>
